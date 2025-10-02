@@ -1,19 +1,22 @@
 :root{
-  --bg: #f7fcf9;          /* soft mint paper */
-  --text: #0f172a;        /* slate-900 */
-  --muted: #475569;       /* slate-600 */
-  --accent: #2e8b57;      /* Luigi green */
-  --accent-ink: #ffffff;  /* button text */
-  --border: #e5e7eb;      /* gray-200 */
+  --bg: #f7fcf9;            /* soft mint paper */
+  --text: #0f172a;          /* slate-900 */
+  --muted: #475569;         /* slate-600 */
+  --border: #e5e7eb;        /* gray-200 */
   --shadow: 0 10px 30px rgba(0,0,0,.08);
   --maxw: 72ch;
+
+  /* Accents */
+  --accent-luigi: #2e8b57;  /* Luigi green */
+  --accent-mario: #ef4444;  /* Mario red */
+  --ink: #ffffff;
 }
 
 *,
 *::before,
-*::after{ box-sizing: border-box; }
+*::after { box-sizing: border-box; }
 
-html{ scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
 body{
   margin: 0;
@@ -27,10 +30,11 @@ body{
   position: absolute; left: -9999px; top: -9999px;
 }
 .skip-link:focus{
-  left: 1rem; top: 1rem; background: var(--accent); color: var(--accent-ink);
+  left: 1rem; top: 1rem; background: var(--accent-luigi); color: var(--ink);
   padding: .5rem .75rem; border-radius: .5rem; outline: 2px solid #000;
 }
 
+/* page header */
 .site-header{
   padding: clamp(24px, 5vw, 48px) 20px 12px;
   text-align: center;
@@ -44,6 +48,7 @@ body{
   color: var(--muted);
 }
 
+/* hero art */
 .hero{
   margin: 0 auto;
   padding: 0 20px;
@@ -64,31 +69,54 @@ body{
   text-align: center;
 }
 
+/* character sections */
+.character{ margin: 2rem auto 3rem; }
+
+.character-header{
+  text-align: center;
+  padding: 8px 20px 0;
+}
+.character-title{
+  margin: 0;
+  font-size: clamp(1.25rem, 2vw + .5rem, 1.75rem);
+}
+.character-subtitle{
+  margin: .25rem 0 0;
+  color: var(--muted);
+}
+
+/* per-character accents */
+.character-header--luigi .character-title{ color: var(--accent-luigi); }
+.character-header--mario .character-title{ color: var(--accent-mario); }
+
+/* body copy */
 .copy{
-  margin: 1.75rem auto 3rem;
+  margin: 1rem auto 0;
   padding: 0 20px;
   max-width: var(--maxw);
 }
 .copy p{ margin: 0 0 1rem 0; }
 
+/* buttons */
 .button{
   display: inline-block;
-  background: var(--accent);
-  color: var(--accent-ink);
+  background: var(--accent-luigi);
+  color: var(--ink);
   text-decoration: none;
   padding: .6rem 1rem;
   border-radius: .6rem;
   box-shadow: var(--shadow);
   transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease;
 }
+.button--mario{ background: var(--accent-mario); }
+
 .button:hover{
   transform: translateY(-1px);
   box-shadow: 0 12px 32px rgba(0,0,0,.12);
 }
-.button:active{
-  transform: translateY(0);
-}
+.button:active{ transform: translateY(0); }
 
+/* footer */
 .site-footer{
   padding: 24px;
   text-align: center;
@@ -96,9 +124,8 @@ body{
   border-top: 1px solid var(--border);
 }
 
-/* respects reduced motion */
+/* motion preference */
 @media (prefers-reduced-motion: reduce){
-  html{ scroll-behavior: auto; }
-  .button{ transition: none; }
+  html { scroll-behavior: auto; }
+  .button { transition: none; }
 }
-
