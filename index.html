@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tribute to Luigi</title>
-    <link rel="stylesheet" href="Style.css">
-    </head>
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tribute To My Favorite Videogames Characters</title>
+  <meta name="description" content="A simple, professional tribute page celebrating Luigi — the unsung hero of the Mushroom Kingdom." />
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <main id="main">
-    <h1 id="title">Luigi - The Unsung Hero of the Mushroom Kingdom</h1>
+  <a class="skip-link" href="#content">Skip to content</a>
 
-    <div id="img-div">
-  <img id="image" src="luigi-fireball.jpg" alt="Luigi ready to attack with fireball">
-  <figcaption id="img-caption">Luigi, in all his green glory, ready to leap into action with heart and courage</figcaption>
-</div>
+  <header class="site-header">
+    <h1 class="title">Luigi — The Unsung Hero of the Mushroom Kingdom</h1>
+    <p class="subtitle">Brave. Loyal. Endlessly underrated.</p>
+  </header>
 
-<section id="tribute-info">
-  <p> Luigi Mario, often overshadowed by his more famous brother, is a courageous and loyal adventurer.
-        From haunted mansions to kart circuits, Luigi's humility, bravery, and quirky personality have
-        earned him a dedicated fanbase. Whether he's vacuuming ghosts or saving the day, Luigi
-        proves that heroes don't always wear red.</p>
-</section>
+  <main id="content">
+    <figure class="hero">
+      <!-- NOTE: using the safer, hyphenated filename -->
+      <img src="mario-and-luigi-brothership.png"
+           alt="Mario & Luigi: Brothership sprites and artwork with Luigi front and center"
+           width="1200" height="820" />
+      <figcaption>Luigi in green, spotlighted alongside Mario — courage with a humble grin.</figcaption>
+    </figure>
 
-<a id="tribute-link" href="https://en.wikipedia.org/wiki/Luigi_(Mario)" target="_blank">Learn more about Luigi here.</a>
-</main>
+    <section class="copy">
+      <p>
+        Luigi Mario may live in his brother’s shadow, but he’s a hero in his own right:
+        cool under pressure, kinder than most, and fearless when it matters. From
+        haunted mansions to kart circuits, Luigi shows up — and gets it done.
+      </p>
+      <p>
+        Whether he’s vacuuming ghosts, nailing the perfect jump, or saving friends with
+        that signature nervous smile, Luigi proves that true heroes don’t need the spotlight.
+      </p>
+      <p class="cta">
+        <a class="button" href="https://en.wikipedia.org/wiki/Luigi_(Mario)" target="_blank" rel="noopener">
+          Learn more about Luigi
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Fan tribute. Not affiliated with Nintendo.</small>
+  </footer>
 </body>
 </html>
+
