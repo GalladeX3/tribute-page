@@ -3,42 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tribute To My Favorite Videogames Characters</title>
-  <meta name="description" content="A simple, professional tribute page celebrating Luigi — the unsung hero of the Mushroom Kingdom." />
+  <title>Tribute To My Favorite Videogame Characters</title>
+  <meta name="description" content="A simple, professional tribute to Mario and Luigi with clean, accessible HTML/CSS." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
 
+  <!-- Page header -->
   <header class="site-header">
-    <h1 class="title">Luigi — The Unsung Hero of the Mushroom Kingdom</h1>
-    <p class="subtitle">Brave. Loyal. Endlessly underrated.</p>
+    <h1 class="title">Tribute To My Favorite Videogame Characters</h1>
+    <p class="subtitle">Celebrating two brothers who defined platforming heroes.</p>
   </header>
 
   <main id="content">
+    <!-- Shared hero artwork -->
     <figure class="hero">
-      <!-- NOTE: using the safer, hyphenated filename -->
-      <img src="mario-and-luigi-brothership.png"
-           alt="Mario & Luigi: Brothership sprites and artwork with Luigi front and center"
-           width="1200" height="820" />
-      <figcaption>Luigi in green, spotlighted alongside Mario — courage with a humble grin.</figcaption>
+      <!-- Use the safe, hyphenated filename -->
+      <img
+        src="mario-and-luigi-brothership.png"
+        alt="Mario and Luigi standing together in Brothership artwork and sprites"
+        width="1200" height="820"
+      />
+      <figcaption>Mario & Luigi — teamwork, timing, and timeless charm.</figcaption>
     </figure>
 
-    <section class="copy">
-      <p>
-        Luigi Mario may live in his brother’s shadow, but he’s a hero in his own right:
-        cool under pressure, kinder than most, and fearless when it matters. From
-        haunted mansions to kart circuits, Luigi shows up — and gets it done.
-      </p>
-      <p>
-        Whether he’s vacuuming ghosts, nailing the perfect jump, or saving friends with
-        that signature nervous smile, Luigi proves that true heroes don’t need the spotlight.
-      </p>
-      <p class="cta">
-        <a class="button" href="https://en.wikipedia.org/wiki/Luigi_(Mario)" target="_blank" rel="noopener">
-          Learn more about Luigi
-        </a>
-      </p>
+    <!-- Luigi section -->
+    <section class="character">
+      <header class="character-header character-header--luigi">
+        <h2 class="character-title">Luigi — The Unsung Hero</h2>
+        <p class="character-subtitle">Brave. Loyal. Endlessly underrated.</p>
+      </header>
+
+      <section class="copy">
+        <p>
+          Luigi Mario may live in his brother’s shadow, but he’s a hero in his own right:
+          cool under pressure, kinder than most, and fearless when it matters. From haunted
+          mansions to kart circuits, Luigi shows up — and gets it done.
+        </p>
+        <p>
+          Whether he’s vacuuming ghosts, nailing the perfect jump, or saving friends with
+          that signature nervous smile, Luigi proves that true heroes don’t need the spotlight.
+        </p>
+        <p class="cta">
+          <a class="button" href="https://en.wikipedia.org/wiki/Luigi_(Mario)" target="_blank" rel="noopener">
+            Learn more about Luigi
+          </a>
+        </p>
+      </section>
+    </section>
+
+    <!-- Mario section -->
+    <section class="character">
+      <header class="character-header character-header--mario">
+        <h2 class="character-title">Mario — The Steadfast Icon</h2>
+        <p class="character-subtitle">Reliable. Adventurous. Timeless.</p>
+      </header>
+
+      <section class="copy">
+        <p>
+          Mario is the series’ steady center — optimistic, adaptable, and always the first to
+          jump into danger. His silhouette is universal, his moveset precise, and his spirit
+          relentlessly upbeat.
+        </p>
+        <p>
+          From tight platformers to sports and karting, Mario evolves without losing the simple,
+          readable design and responsive feel that set the gold standard for game controls.
+        </p>
+        <p class="cta">
+          <a class="button button--mario" href="https://en.wikipedia.org/wiki/Mario" target="_blank" rel="noopener">
+            Learn more about Mario
+          </a>
+        </p>
+      </section>
     </section>
   </main>
 
@@ -47,4 +84,3 @@
   </footer>
 </body>
 </html>
-
