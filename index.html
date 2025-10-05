@@ -1,3 +1,8 @@
+
+---
+
+# index.html (final)
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tribute To My Favorite Videogame Characters</title>
   <meta name="description" content="A simple, professional tribute to Mario and Luigi with clean, accessible HTML/CSS." />
+  <meta name="theme-color" content="#2e8b57" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -19,19 +25,20 @@
   <main id="content">
     <!-- Shared hero artwork -->
     <figure class="hero">
-      <!-- Use the safe, hyphenated filename -->
+      <!-- Safe, hyphenated filename; helpful decoding/priority hints -->
       <img
         src="mario-and-luigi-brothership.png"
         alt="Mario and Luigi standing together in Brothership artwork and sprites"
         width="1200" height="820"
+        decoding="async" fetchpriority="high"
       />
-      <figcaption>Mario & Luigi — teamwork, timing, and timeless charm.</figcaption>
+      <figcaption>Mario &amp; Luigi — teamwork, timing, and timeless charm.</figcaption>
     </figure>
 
     <!-- Luigi section -->
-    <section class="character">
+    <section class="character" aria-labelledby="luigi-title">
       <header class="character-header character-header--luigi">
-        <h2 class="character-title">Luigi — The Unsung Hero</h2>
+        <h2 class="character-title" id="luigi-title">Luigi — The Unsung Hero</h2>
         <p class="character-subtitle">Brave. Loyal. Endlessly underrated.</p>
       </header>
 
@@ -54,9 +61,9 @@
     </section>
 
     <!-- Mario section -->
-    <section class="character">
+    <section class="character" aria-labelledby="mario-title">
       <header class="character-header character-header--mario">
-        <h2 class="character-title">Mario — The Steadfast Icon</h2>
+        <h2 class="character-title" id="mario-title">Mario — The Steadfast Icon</h2>
         <p class="character-subtitle">Reliable. Adventurous. Timeless.</p>
       </header>
 
@@ -84,3 +91,4 @@
   </footer>
 </body>
 </html>
+
